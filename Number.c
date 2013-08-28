@@ -4,6 +4,13 @@
 #include <sol/solar.h>
 #include <sol/runtime.h>
 
+#ifndef M_PI
+#    define M_PI 3.14159265358979323846
+#endif
+#ifndef M_E
+#    define M_E 2.7182818284590452354
+#endif
+
 int solar_init(SolObject exports, SolObject dependencies) {
     sol_obj_set_prop((SolObject) Number, "PI", (SolObject) sol_num_create(M_PI));
     sol_obj_set_prop((SolObject) Number, "TAU", (SolObject) sol_num_create(2 * M_PI));
