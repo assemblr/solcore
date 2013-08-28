@@ -6,7 +6,7 @@ include_directories("${CMAKE_INSTALL_PREFIX}/include")
 add_definitions(-std=c99)
 
 if(${UNIX})
-    add_definitions(-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_POSIX_C_SOURCE=200112)
+    add_definitions(-D_POSIX_C_SOURCE=200809L)
 endif()
 
 if (${CMAKE_C_COMPILER_ID} STREQUAL "Clang")
