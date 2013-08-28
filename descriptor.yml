@@ -1,0 +1,110 @@
+name: solcore
+description: Sol core libraries.
+author: Jake King
+version: '0.0.1'
+
+binaries:
+- 'solcore.solbin'
+
+natives:
+  Event:
+    extend:
+      Event:
+        prototype:
+          initWithType:
+            function: Event_initWithType
+  Function:
+    extend:
+      Function:
+        prototype:
+          apply:
+            function: Function_apply
+          call:
+            function: Function_call
+  List:
+    extend:
+      List:
+        prototype:
+          el:
+            function: List_el
+          length:
+            function: List_length
+          add:
+            function: List_add
+          remove:
+            function: List_remove
+          index:
+            function: List_index
+          slice:
+            function: List_slice
+          iterate:
+            function: List_iterate
+  Number:
+    extend:
+      Number:
+        properties:
+          random:
+            function: Number_random
+        prototype:
+          floor:
+            function: Number_floor
+          ceil:
+            function: Number_ceil
+          round:
+            function: Number_round
+          sqrt:
+            function: Number_sqrt
+          sin:
+            function: Number_sin
+          cos:
+            function: Number_cos
+          tan:
+            function: Number_tan
+          asin:
+            function: Number_asin
+          acos:
+            function: Number_acos
+          atan:
+            function: Number_atan
+          sinh:
+            function: Number_sinh
+          cosh:
+            function: Number_cosh
+          tanh:
+            function: Number_tanh
+          abs:
+            function: Number_abs
+          ln:
+            function: Number_ln
+          pow:
+            function: Number_pow
+  Object:
+    extend:
+      Object:
+        prototype:
+          is?:
+            function: Object_is
+  String:
+    extend:
+      String:
+        prototype:
+          el:
+            function: String_el
+          index-of:
+            function: String_index_of
+          length:
+            function: String_length
+          slice:
+            function: String_slice
+          split:
+            function: String_split
+          ->number:
+            function: String_to_number
+          ->token:
+            function: String_to_token
+          trim:
+            function: String_trim
+          digit?:
+            function: String_is_digit
+          whitespace?:
+            function: String_is_whitespace
